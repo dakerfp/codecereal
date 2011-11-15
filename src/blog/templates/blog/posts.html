@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if posts %}
+    {% for post in posts %}
+       {% include "blog/post.html" %}
+    {% endfor %}
+  {% else %}
+    <div class="alert-message warning">
+      <a class="close" href="#">×</a>
+      <p><strong>Is not mom!</strong> I'm having some issue with the blog.</p>
+    </div>
+  {% endif %}
+{% endblock %}
