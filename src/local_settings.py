@@ -51,3 +51,8 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
+
+import markdown
+MARKUP_FIELD_TYPES = (
+    ('markdown', markdown.markdown),
+)
