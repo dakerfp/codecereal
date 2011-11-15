@@ -1,36 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
-  <head>
-    <title>CodeCereal</title>
-    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
-  </head>
-  <body>
-    <!-- Top bar -->
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-          <a class="brand" href="#">CodeCereal</a>
-          <ul class="nav">
-            <li><a href="#blog">Home</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <!-- Banner -->
-      <div class="hero-unit">
-        <h1>CodeCereal</h1>
-        <p>Coming Soon...</p>
-      </div>
-
-      <footer>
-        <p>&copy; dakerfp 2011
-      </footer>
-    </div>
-  </body>
-</html>
+{% extends "base.html" %}
+{% block banner %}
+  <h1>CodeCereal</h1>
+  <p>Coming Soon...</p>
+{% endblock %}
 
