@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 
+{% block head %}
+<!-- <link rel="alternate" type="application/atom+xml" title="CodeCereal feed" href="/feed/" /> -->
+{% endblock %}
+
 {% block content %}
   {% if posts %}
-    {% for post in posts %}
-       {% include "blog/post.html" %}
-    {% endfor %}
+    <div class="row">
+      {% for post in posts %}
+        {% include "blog/post_summary.html" %}
+      {% endfor %}
+    </div>
   {% else %}
     <div class="alert-message warning">
       <a class="close" href="#">×</a>
