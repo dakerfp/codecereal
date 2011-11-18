@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 
 from models import Post
@@ -10,10 +10,8 @@ def posts(request):
     return render_to_response('blog/posts.html', ctx,
                               RequestContext(request))
 
-def post(request, post_id):
-    post = Post.objects.get(id=post_id)
-
-    print "XXX"
+def post(request, slug):
+    post = get_object_or_404(Post,slug=slug)
 
     ctx = {'post': post}
     return render_to_response('blog/post.html', ctx,
