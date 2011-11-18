@@ -10,7 +10,11 @@ def posts(request):
     return render_to_response('blog/posts.html', ctx,
                               RequestContext(request))
 
-def hello(request):
-    ctx = {'post': {'title': 'Python with ghmm', 'content': 'Lorem ipsum'}}
-    return render_to_response('blog/post_summary.html', ctx,
+def post(request, post_id):
+    post = Post.objects.get(id=post_id)
+
+    print "XXX"
+
+    ctx = {'post': post}
+    return render_to_response('blog/post.html', ctx,
                               RequestContext(request))

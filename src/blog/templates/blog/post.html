@@ -1,5 +1,16 @@
-<h2>{{ post.title }}</h2>
+{% extends "base.html" %}
 
-{{ post.content }}
+{% block head %}
+<!-- <link rel="alternate" type="application/atom+xml" title="CodeCereal feed" href="/feed/" /> -->
+{% endblock %}
 
+{% block content %}
+  <header>
+    <h1>{{ post.title }}</h1>
+  </header>
+
+  {{ post.content }}
+
+  <a class="btn" href="{% url blog %}"><strong>&laquo;</strong> Back</a>
+{% endblock %}
 

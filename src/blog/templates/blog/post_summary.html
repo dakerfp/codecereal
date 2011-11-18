@@ -3,5 +3,5 @@
     <h1>{{ post.title }}</h1>
   </header>
   {{ post.content }}
-  <p><a class="btn" href="#">Read full post &raquo;</a></p>
+  <p><a class="btn" href="{% url post post.id %}">Read full post <strong>&raquo;</strong></a></p>
 </article>

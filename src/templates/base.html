@@ -15,12 +15,12 @@
       <div class="fill">
         <div class="container">
           {% block topbar %}
-            <a class="brand" href="#">CodeCereal</a>
+            <a class="brand" href="{% url home %}">CodeCereal</a>
             <nav>
               <ul class="nav">
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{% url blog %}">Blog</a></li>
+                <li><a href="{% url about %}">About</a></li>
+                <li><a href="{% url contact %}">Contact</a></li>
               </ul>
             </nav>
           {% endblock %}
@@ -31,7 +31,7 @@
     <div class="container">
       <!--  -->
       <header class="hero-unit">
-        {% block banner %}
+        {% block header %}
           <hgroup>
             <h1>CodeCereal</h1>
             <h2>A personal blog about computing, science and the universe.</h2>
@@ -46,7 +46,7 @@
       <footer>
         {% block footer %}
         {% endblock %}
-        <p>&copy; dakerfp 2011</p>
+        <p>&copy; Daker Fernandes Pinheiro 2011</p>
       </footer>
     </div>
   </body>
