@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     url(r'^$', core.home, name='home'),
     url(r'^about$', core.about, name='about'),
     url(r'^contact$', core.contact, name='contact'),
-    url(r'^blog/', include('blog.urls')),
+    url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^admin/', include(admin.site.urls)),
 )
 
